@@ -11,6 +11,15 @@ class Solution
     {
         int result = 0;
 
+        int m = arr.GetLength(0);
+        int n = arr.GetLength(1);
+
+        int[][] temparr = new int[m][];
+
+        for(int j=0; j<n;j++)
+        {
+            temparr[0][j] = temparr[0][j - 1] + arr[0][j];
+        }
        
 
         return result;
